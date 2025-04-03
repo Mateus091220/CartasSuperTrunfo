@@ -19,6 +19,10 @@ int main() {
     float pib2;
     int pontosTuristicos2;
 
+    // Variáveis para os cálculos
+    float densidadePopulacional1, densidadePopulacional2;
+    float pibPerCapita1, pibPerCapita2;
+
     // Instruções para o usuário
     printf("=== Cadastro das Cartas do Super Trunfo ===\n");
 
@@ -68,6 +72,14 @@ int main() {
     printf("Numero de Pontos Turisticos: ");
     scanf("%d", &pontosTuristicos2);
 
+    // Cálculos para a primeira carta
+    densidadePopulacional1 = populacao1 / area1;
+    pibPerCapita1 = (pib1 * 1000000000) / populacao1; // Convertendo bilhões para unidades
+
+    // Cálculos para a segunda carta
+    densidadePopulacional2 = populacao2 / area2;
+    pibPerCapita2 = (pib2 * 1000000000) / populacao2; // Convertendo bilhões para unidades
+
     // Exibição dos dados cadastrados
     printf("\n=== Informacoes das Cartas Cadastradas ===\n");
 
@@ -78,8 +90,10 @@ int main() {
     printf("Nome da Cidade: %s\n", nomeCidade1);
     printf("Populacao: %d\n", populacao1);
     printf("Area: %.2f km²\n", area1);
-    printf("PIB: %.2f bilhões de reais\n", pib1);
+    printf("PIB: %.2f bilhoes de reais\n", pib1);
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional1);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
 
     // Exibição da segunda carta
     printf("\nCarta 2:\n");
@@ -88,8 +102,10 @@ int main() {
     printf("Nome da Cidade: %s\n", nomeCidade2);
     printf("Populacao: %d\n", populacao2);
     printf("Area: %.2f km²\n", area2);
-    printf("PIB: %.2f bilhões de reais\n", pib2);
+    printf("PIB: %.2f bilhoes de reais\n", pib2);
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
 
     return 0;
 }
